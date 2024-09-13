@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Poppins",sans-serif;
+
+}
+body{
+    background-color: black;
+    background-image: url(fitness.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+
+}
+.navbar{
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.navbar h1:hover{
+    color: red;
+    font-size:2.5rem;
+}
+.navbar ul{
+    display: flex;
+    justify-content:space-around;
+    font-size:1.2rem;
+}
+.navbar ul li{
+    display:flex;
+    justify-content: space-around;
+    padding:40px;
+}
+.navbar ul li a{
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+}
+.navbar ul li a:hover{
+    font-size:1.3rem;
+    color:red;
+}
+.main{
+    text-align: center;
+    margin-top: 100px;
+    
+}
+.main h1{
+    color:white;
+    text-shadow: 5px 2px 5px;
+}
+.button{
+    text-align: center;
+    margin-top: 60px;
+}
+.button button{
+    font-size:2rem ;
+    background-color:red;
+    
+    
+}
