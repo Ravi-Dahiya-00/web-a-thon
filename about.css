@@ -1,0 +1,36 @@
+/* About Us Page Styles */
+.about-section {
+    padding: 50px 20px;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-container h1 {
+    color: #0056b3;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-container h2 {
+    color: #007bff;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.nav-links .active {
+    color: #007bff;
+    text-decoration: underline;
+}
