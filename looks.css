@@ -71,10 +71,18 @@ body {
     white-space: pre-wrap;
     word-wrap: break-word;
     max-height: 400px;
-    overflow-y:auto;
+    overflow-y: auto;
  }
  .highlight {
     color:blue;
     font-style: bold;
     font-weight: 400;
  }
+
+ .main * {
+  word-wrap: break-word;
+}
+
+.main * {
+  white-space: pre-wrap;
+}

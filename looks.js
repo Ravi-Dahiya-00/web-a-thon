@@ -6,7 +6,7 @@ const externalUserId = 'user-123'; // Dummy user ID, replace if needed
 // Function to create a chat session
 async function createChatSession(apiKey, externalUserId) {
   const response = await fetch('https://api.on-demand.io/chat/v1/sessions', {
-    method: 'POST',
+    method: 'POST', 
     headers: {   
       'Content-Type': 'application/json',
       'apikey': apiKey
@@ -41,19 +41,20 @@ async function submitQuery(apiKey, sessionId, query) {
   const data = await response.json();
   return data;
 }
+
 function formatResponse(resultsElement) {
-    const words = resultsElement.split(' ');
-    let formattedText = '';
-    
-    for (let i = 0; i < words.length; i++) {
-      formattedText += words[i] + ' ';
-      if ((i + 1) % 10 === 0) { // Every 10 words, add a line break
-        formattedText += '<br>';
-      }
+  const words = resultsElement.split(' ');
+  let formattedText = '';
+
+  for (let i = 0; i < words.length; i++) {
+    formattedText += `${words[i]} `;
+    if ((i + 1) % 10 === 0 && i !== 0) { // Every 10 words, add a line break
+      formattedText += '<br>'; // Use <br> for a line break in HTML
     }
-  
-    return formattedText;
   }
+
+  return formattedText;
+}
 
 document.getElementById('submitBtn').addEventListener('click', async () => {
   const query = document.getElementById('queryInput').value;
@@ -80,14 +81,11 @@ document.getElementById('submitBtn').addEventListener('click', async () => {
     const sessionId = await createChatSession(apiKey, externalUserId);
     const response = await submitQuery(apiKey, sessionId, query);
     loadingElement.style.display = 'none';
-
-    // Display results
-    resultsElement.innerHTML = `<pre>
-    ${JSON.stringify(response, null, 2)}
-    </pre>`;
+  
+    // Display results with formatting
+    const formattedResponse = formatResponse(JSON.stringify(response, null, 2));
+    resultsElement.innerHTML = `<br>${formattedResponse}</br>`;
   } catch (error) {
-    loadingElement.style.display = 'none';
-    errorElement.style.display = 'block';
-    console.error('Error:', error);
+    // ...
   }
 });
