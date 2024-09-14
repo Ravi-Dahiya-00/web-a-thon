@@ -88,4 +88,14 @@ document.getElementById('submitBtn').addEventListener('click', async () => {
   } catch (error) {
     // ...
   }
+
+  const inputField = document.getElementById('myInputField');
+const submitButton = document.getElementById('mySubmitButton');
+
+inputField.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    submitButton.click();
+  }
+});
 });

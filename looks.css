@@ -86,3 +86,16 @@ body {
 .main * {
   white-space: pre-wrap;
 }
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('font.jpg');
+
+
+  button:hover {
+    background-color: #333;
+    color: #36a8e5;
+    transition: background-color 0.4s, color 0.3s;
+  }
+  
+}

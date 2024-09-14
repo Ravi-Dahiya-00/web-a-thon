@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your AI Agent </title>
+  <link rel="stylesheet" href="looks.css">
+</head>
+<body>
+  <div><img src="logo.png" alt=""></div>
+
+  <div class="container">
+    <h1 style="color: aqua;">Your AI Assistant</h1>
+    <div class="search-container">
+      <input type="text" id="queryInput" placeholder="Ask me anything that is in your mind....." />
+      <button id="submitBtn" >Search</button>
+    </div>
+    <div id="loading" style="display:none;"><pre>we are collecting data for you
+      please wait...</pre></div>
+    <div id="results"> <br></div>
+    <div id="error" style="display:none;">An error occurred. Please try again.</div>
+  </div>
+
+  <script src="looks.js"></script>
+</body>
+</html>

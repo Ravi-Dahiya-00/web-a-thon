@@ -3,21 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your AI Agent </title>
+  <title>Your AI Assistant</title>
   <link rel="stylesheet" href="looks.css">
+  <style>
+    /* Add a background image */
+    body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    /* Consistent color scheme */
+    .aqua {
+      color: #6deb6b;
+    }
+    /* Icon for search input field */
+    .search-container {
+      position: relative;
+    }
+    .search-container::before {
+      content: '\f002'; /* magnifying glass icon */
+      font-family: 'Font Awesome 5 Free';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #f58bee;
+    }
+    /* Style the buttons */
+    .button {
+      background-color: #432a0e;
+      color: #f18989;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #b2eb55;
+    }
+  </style>
 </head>
 <body>
+    <h1 class="font-family"></h1>
+  <div><img src="logo.png" alt="" class="logo"></div>
   <div class="container">
-    <h1 style="color: aqua;">Your AI Assistant</h1>
+    <h1 class="aqua">Your AI Assistant</h1>
     <div class="search-container">
       <input type="text" id="queryInput" placeholder="Ask me anything that is in your mind....." />
-      <button id="submitBtn">Search</button>
+      <button id="submitBtn" class="button">Search</button>
     </div>
-    <div id="loading" style="display:none;">Loading...</div>
+    <div id="loading" style="display:none;">
+      <pre>we are collecting data for you
+        please wait...</pre>
+      <i class="fas fa-spinner fa-spin" style="font-size: 24px;"></i>
+    </div>
     <div id="results"> <br></div>
     <div id="error" style="display:none;">An error occurred. Please try again.</div>
   </div>
-
   <script src="looks.js"></script>
 </body>
 </html>
